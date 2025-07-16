@@ -1,0 +1,15 @@
+{
+  "name": "f1-multiplayer-game",
+  "version": "1.0.0",
+  "description": "A simple 3D multiplayer game using Three.js and WebSockets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

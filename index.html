@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three.js Multiplayer Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: sans-serif;
+            color: #eee;
+            background-color: #222;
+        }
+        #gameCanvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        #menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 1;
+        }
+        #menu h1 {
+            color: #00ff00;
+            margin-bottom: 20px;
+        }
+        #menu input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #444;
+            color: #eee;
+            width: 250px;
+            font-size: 16px;
+        }
+        #menu button {
+            background-color: #00ff00;
+            color: #222;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        #menu button:hover {
+            background-color: #00cc00;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <h1>F1 Multiplayer Game</h1>
+        <input type="text" id="ipInput" placeholder="Enter Host IP (e.g., 192.168.1.100)">
+        <br>
+        <button id="joinButton">Join Game</button>
+        <button id="hostButton">Host Game</button>
+    </div>
+    <div id="gameCanvas"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
